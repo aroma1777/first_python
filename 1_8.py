@@ -55,6 +55,13 @@ def even_odd(game_money,player_money,playing_amount):
 	x=int(input("Choise"))
 	if x==1 or x==2:
 		lucky_number=dice_thrower()
+		if x==1 and lucky_number%2==0:
+			if lucky_number==6:
+				lucky_number = lucky_number - 1
+			else:
+				lucky_number=lucky_number+1
+		elif x==2 and lucky_number%2 != 0:
+			lucky_number=lukcy_number+1
 		print("The number lucky number is",lucky_number)
 		if lucky_number%2==0 and x==1:
 			print("You have gussed correctly")
